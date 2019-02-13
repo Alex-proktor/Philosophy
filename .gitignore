@@ -1,5 +1,6 @@
 ### Python template
 # Byte-compiled / optimized / DLL files
+.idea/
 __pycache__/
 *.py[cod]
 *$py.class
@@ -340,6 +341,9 @@ philosophy/media/
 .pytest_cache/
 
 
-.env
-.envs/*
-!.envs/.local/
+.env
+
+.envs/*
+
+!.envs/.local/
+
