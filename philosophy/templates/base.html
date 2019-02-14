@@ -1,4 +1,5 @@
-{% load static i18n %}<!DOCTYPE html>
+{% load static i18n %}
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -27,9 +28,9 @@
       <!-- CSS
     ================================================== -->
 {#      todo: fix connect css#}
-    <link rel="stylesheet" href="{% static 'bootstrap/philosophy-colorlib/css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'bootstrap/philosophy-colorlib/css/vendor.css' %}">
-    <link rel="stylesheet" href="{% static 'bootstrap/philosophy-colorlib/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
     {% endblock %}
 
@@ -37,61 +38,61 @@
 
   <body>
 
-    <div class="mb-1">
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'home' %}">Philosophy</a>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            {% if request.user.is_authenticated %}
-              <li class="nav-item">
+{#    <div class="mb-1">#}
+{#      <nav class="navbar navbar-expand-md navbar-light bg-light">#}
+{#        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"#}
+{#                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"#}
+{#                aria-expanded="false" aria-label="Toggle navigation">#}
+{#          <span class="navbar-toggler-icon"></span>#}
+{#        </button>#}
+{#        <a class="navbar-brand" href="{% url 'home' %}">Philosophy</a>#}
+{##}
+{#        <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+{#          <ul class="navbar-nav mr-auto">#}
+{#            <li class="nav-item active">#}
+{#              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#              <a class="nav-link" href="{% url 'about' %}">About</a>#}
+{#            </li>#}
+{#            {% if request.user.is_authenticated %}#}
+{#              <li class="nav-item">#}
                 {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
-              </li>
-              <li class="nav-item">
+{#                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>#}
+{#              </li>#}
+{#              <li class="nav-item">#}
                 {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
+{#                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>#}
+{#              </li>#}
+{#            {% else %}#}
+{#              <li class="nav-item">#}
                 {# URL provided by django-allauth/account/urls.py #}
-                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-              </li>
-              <li class="nav-item">
+{#                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>#}
+{#              </li>#}
+{#              <li class="nav-item">#}
                 {# URL provided by django-allauth/account/urls.py #}
-                <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-              </li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav>
-
-    </div>
-
-    <div class="container">
-
-      {% if messages %}
-          {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
-          {% endfor %}
-      {% endif %}
-
-      {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
-      {% endblock content %}
-
-    </div> <!-- /container -->
+{#                <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>#}
+{#              </li>#}
+{#            {% endif %}#}
+{#          </ul>#}
+{#        </div>#}
+{#      </nav>#}
+{##}
+{#    </div>#}
+{##}
+{#    <div class="container">#}
+{##}
+{#      {% if messages %}#}
+{#          {% for message in messages %}#}
+{#              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>#}
+{#          {% endfor %}#}
+{#      {% endif %}#}
+{##}
+{#      {% block content %}#}
+{#        <p>Use this document as a way to quick start any new project.</p>#}
+{#      {% endblock content %}#}
+{##}
+{#    </div> <!-- /container -->#}
 
 
 
@@ -108,7 +109,7 @@
 
                 <div class="header__logo">
                     <a class="logo" href="{% static 'bootstrap/philosophy-colorlib/index.html' %}">
-                        <img src="{% static 'bootstrap/philosophy-colorlib/images/logo.svg' %}" alt="Homepage">
+                        <img src="{% static 'images/logo.svg' %}" alt="Homepage">
                     </a>
                 </div> <!-- end header__logo -->
 
@@ -191,7 +192,7 @@
                 <div class="featured">
 
                     <div class="featured__column featured__column--big">
-                        <div class="entry" style="background-image:url({% static 'bootstrap/philosophy-colorlib/images/thumbs/featured/featured-guitarman.jpg' %});">
+                        <div class="entry" style="background-image:url({% static 'images/thumbs/featured/featured-guitarman.jpg' %});">
 
                             <div class="entry__content">
                                 <span class="entry__category"><a href="#0">Music</a></span>
@@ -200,7 +201,7 @@
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="{% static 'bootstrap/philosophy-colorlib/images/avatars/user-03.jpg' %}" alt="">
+                                        <img class="avatar" src="{% static 'images/avatars/user-03.jpg' %}" alt="">
                                     </a>
 
                                     <ul class="entry__meta">
@@ -215,7 +216,7 @@
 
                     <div class="featured__column featured__column--small">
 
-                        <div class="entry" style="background-image:url({% static 'bootstrap/philosophy-colorlib/images/thumbs/featured/featured-watch.jpg'%});">
+                        <div class="entry" style="background-image:url({% static 'images/thumbs/featured/featured-watch.jpg'%});">
 
                             <div class="entry__content">
                                 <span class="entry__category"><a href="#0">Management</a></span>
@@ -224,7 +225,7 @@
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="{% static 'bootstrap/philosophy-colorlib/images/avatars/user-03.jpg' %}" alt="">
+                                        <img class="avatar" src="{% static 'images/avatars/user-03.jpg' %}" alt="">
                                     </a>
 
                                     <ul class="entry__meta">
@@ -236,7 +237,7 @@
 
                         </div> <!-- end entry -->
 
-                        <div class="entry" style="background-image:url({% static 'bootstrap/philosophy-colorlib/images/thumbs/featured/featured-beetle.jpg'%});">
+                        <div class="entry" style="background-image:url({% static 'images/thumbs/featured/featured-beetle.jpg'%});">
 
                             <div class="entry__content">
                                 <span class="entry__category"><a href="#0">LifeStyle</a></span>
@@ -245,7 +246,7 @@
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="{% static 'bootstrap/philosophy-colorlib/images/avatars/user-03.jpg' %}" alt="">
+                                        <img class="avatar" src="{% static 'images/avatars/user-03.jpg' %}" alt="">
                                     </a>
 
                                     <ul class="entry__meta">
@@ -279,9 +280,9 @@
 
                     <div class="entry__thumb">
                         <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/lamp-400.jpg' %}"
-                                 srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/lamp-400.jpg' %}
-                                 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/lamp-800.jpg' %} 2x"
+                            <img src="{% static 'images/thumbs/masonry/lamp-400.jpg' %}"
+                                 srcset="{% static 'images/thumbs/masonry/lamp-400.jpg' %}
+                                 1x, {% static 'images/thumbs/masonry/lamp-800.jpg' %} 2x"
                                  alt="">
                         </a>
                     </div>
@@ -328,8 +329,8 @@
 
                     <div class="entry__thumb">
                         <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/tulips-400.jpg' %}"
-                                    srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/tulips-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/tulips-800.jpg' %} 2x" alt="">
+                            <img src="{% static 'images/thumbs/masonry/tulips-400.jpg' %}"
+                                    srcset="{% static 'images/thumbs/masonry/tulips-400.jpg' %} 1x, {% static 'images/thumbs/masonry/tulips-800.jpg' %} 2x" alt="">
                         </a>
                     </div>
 
@@ -360,8 +361,8 @@
 
                     <div class="entry__thumb">
                         <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/cookies-400.jpg' %}"
-                                    srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/cookies-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/cookies-800.jpg' %} 2x" alt="">
+                            <img src="{% static 'images/thumbs/masonry/cookies-400.jpg' %}"
+                                    srcset="{% static 'images/thumbs/masonry/cookies-400.jpg' %} 1x, {% static 'images/thumbs/masonry/cookies-800.jpg' %} 2x" alt="">
                         </a>
                     </div>
 
@@ -393,8 +394,8 @@
 
                     <div class="entry__thumb">
                         <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/wheel-400.jpg' %}"
-                                    srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/wheel-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/wheel-800.jpg' %}' 2x" alt="">
+                            <img src="{% static 'images/thumbs/masonry/wheel-400.jpg' %}"
+                                    srcset="{% static 'images/thumbs/masonry/wheel-400.jpg' %} 1x, {% static 'images/thumbs/masonry/wheel-800.jpg' %}' 2x" alt="">
                         </a>
                     </div>
 
@@ -426,8 +427,8 @@
 
                     <div class="entry__thumb video-image">
                         <a href="https://player.vimeo.com/video/117310401?color=01aef0&title=0&byline=0&portrait=0" data-lity>
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/shutterbug-400.jpg' %}"
-                                    srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/shutterbug-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/shutterbug-800.jpg' %} 2x" alt="">
+                            <img src="{% static 'images/thumbs/masonry/shutterbug-400.jpg' %}"
+                                    srcset="{% static 'images/thumbs/masonry/shutterbug-400.jpg' %} 1x, {% static 'images/thumbs/masonry/shutterbug-800.jpg' %} 2x" alt="">
                         </a>
                     </div>
 
@@ -461,16 +462,16 @@
                     <div class="entry__thumb slider">
                         <div class="slider__slides">
                             <div class="slider__slide">
-                                <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/gallery/gallery-1-400.jpg' %}"
-                                        srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/gallery/gallery-1-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/gallery/gallery-1-800.jpg' %} 2x" alt="">
+                                <img src="{% static 'images/thumbs/masonry/gallery/gallery-1-400.jpg' %}"
+                                        srcset="{% static 'images/thumbs/masonry/gallery/gallery-1-400.jpg' %} 1x, {% static 'images/thumbs/masonry/gallery/gallery-1-800.jpg' %} 2x" alt="">
                             </div>
                             <div class="slider__slide">
-                                <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/gallery/gallery-2-400.jpg"
-                                        srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/gallery/gallery-2-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/gallery/gallery-2-800.jpg' %} 2x" alt="">
+                                <img src="{% static 'images/thumbs/masonry/gallery/gallery-2-400.jpg' %}"
+                                        srcset="{% static 'images/thumbs/masonry/gallery/gallery-2-400.jpg' %} 1x, {% static 'images/thumbs/masonry/gallery/gallery-2-800.jpg' %} 2x" alt="">
                             </div>
                             <div class="slider__slide">
-                                <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/gallery/gallery-3-400.jpg"
-                                        srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/gallery/gallery-3-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/gallery/gallery-3-800.jpg' %} 2x" alt="">
+                                <img src="{% static 'images/thumbs/masonry/gallery/gallery-3-400.jpg' %}"
+                                        srcset="{% static 'images/thumbs/masonry/gallery/gallery-3-400.jpg' %} 1x, {% static 'images/thumbs/masonry/gallery/gallery-3-800.jpg' %} 2x" alt="">
                             </div>
                         </div>
                     </div>
@@ -503,11 +504,11 @@
 
                     <div class="entry__thumb">
                         <a href="{% static 'bootstrap/philosophy-colorlib/single-audio.html' %}" class="entry__thumb-link">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/guitarman-400.jpg' %}"
-                                    srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/guitarman-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/guitarman-800.jpg' %} 2x" alt="">
+                            <img src="{% static 'images/thumbs/masonry/guitarman-400.jpg' %}"
+                                    srcset="{% static 'images/thumbs/masonry/guitarman-400.jpg' %} 1x, {% static 'images/thumbs/masonry/guitarman-800.jpg' %} 2x" alt="">
                         </a>
                         <div class="audio-wrap">
-                            <audio id="player" src="{% static 'bootstrap/philosophy-colorlib/media/AirReview-Landmarks-02-ChasingCorporate.mp3' %}" width="100%" height="42" controls="controls"></audio>
+                            <audio id="player" src="{% static 'media/AirReview-Landmarks-02-ChasingCorporate.mp3' %}" width="100%" height="42" controls="controls"></audio>
                         </div>
                     </div>
 
@@ -552,8 +553,8 @@
 
                     <div class="entry__thumb">
                         <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/jump-400.jpg' %}"
-                                    srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/jump-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/jump-800.jpg' %} 2x" alt="">
+                            <img src="{% static 'images/thumbs/masonry/jump-400.jpg' %}"
+                                    srcset="{% static 'images/thumbs/masonry/jump-400.jpg' %} 1x, {% static 'images/thumbs/masonry/jump-800.jpg' %} 2x" alt="">
                         </a>
                     </div>
 
@@ -585,8 +586,8 @@
 
                     <div class="entry__thumb">
                         <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/beetle-400.jpg' %}"
-                                    srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/beetle-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/beetle-800.jpg' %} 2x" alt="">
+                            <img src="{% static 'images/thumbs/masonry/beetle-400.jpg' %}"
+                                    srcset="{% static 'images/thumbs/masonry/beetle-400.jpg' %} 1x, {% static 'images/thumbs/masonry/beetle-800.jpg' %} 2x" alt="">
                         </a>
                     </div>
 
@@ -617,8 +618,8 @@
 
                     <div class="entry__thumb">
                         <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/fuji-400.jpg' %}"
-                                    srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/fuji-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/fuji-800.jpg' %} 2x" alt="">
+                            <img src="{% static 'images/thumbs/masonry/fuji-400.jpg' %}"
+                                    srcset="{% static 'images/thumbs/masonry/fuji-400.jpg' %} 1x, {% static 'images/thumbs/masonry/fuji-800.jpg' %} 2x" alt="">
                         </a>
                     </div>
 
@@ -650,8 +651,8 @@
 
                     <div class="entry__thumb">
                         <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/sydney-400.jpg' %}"
-                                    srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/sydney-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/sydney-800.jpg' %} 2x" alt="">
+                            <img src="{% static 'images/thumbs/masonry/sydney-400.jpg' %}"
+                                    srcset="{% static 'images/thumbs/masonry/sydney-400.jpg' %} 1x, {% static 'images/thumbs/masonry/sydney-800.jpg' %} 2x" alt="">
                         </a>
                     </div>
 
@@ -715,7 +716,7 @@
                 <div class="block-1-2 block-m-full popular__posts">
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/small/wheel-150.jpg' %}" alt="">
+                            <img src="{% static 'images/thumbs/small/wheel-150.jpg' %}" alt="">
                         </a>
                         <h5><a href="#0">Visiting Theme Parks Improves Your Health.</a></h5>
                         <section class="popular__meta">
@@ -725,7 +726,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/small/shutterbug-150.jpg' %}" alt="">
+                            <img src="{% static 'images/thumbs/small/shutterbug-150.jpg' %}" alt="">
                         </a>
                         <h5><a href="#0">Key Benefits Of Family Photography.</a></h5>
                         <section class="popular__meta">
@@ -735,7 +736,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/small/cookies-150.jpg' %}" alt="">
+                            <img src="{% static 'images/thumbs/small/cookies-150.jpg' %}" alt="">
                         </a>
                         <h5><a href="#0">Absolutely No Sugar Oatmeal Cookies.</a></h5>
                         <section class="popular__meta">
@@ -745,7 +746,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/small/beetle-150.jpg' %}" alt="">
+                            <img src="{% static 'images/thumbs/small/beetle-150.jpg' %}" alt="">
                         </a>
                         <h5><a href="#0">Throwback To The Good Old Days.</a></h5>
                         <section class="popular__meta">
@@ -755,7 +756,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/small/tulips-150.jpg' %}" alt="">
+                            <img src="{% static 'images/thumbs/small/tulips-150.jpg' %}" alt="">
                         </a>
                         <h5><a href="#0">10 Interesting Facts About Caffeine.</a></h5>
                         <section class="popular__meta">
@@ -765,7 +766,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/small/salad-150.jpg' %}" alt="">
+                            <img src="{% static 'images/thumbs/small/salad-150.jpg' %}" alt="">
                         </a>
                         <h5><a href="#0">Healthy Mediterranean Salad Recipes</a></h5>
                         <section class="popular__meta">
@@ -960,8 +961,8 @@
 
     <!-- script
     ================================================== -->
-    <script src="{% static 'bootstrap/philosophy-colorlib/js/modernizr.js' %}"></script>
-    <script src="{% static 'bootstrap/philosophy-colorlib/js/pace.min.js' %}"></script>
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
 
 
 
