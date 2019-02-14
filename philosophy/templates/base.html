@@ -27,9 +27,9 @@
       <!-- CSS
     ================================================== -->
 {#      todo: fix connect css#}
-{#    <link rel="stylesheet" href="{% static 'bootstrap/philosophy-colorlib/css/base.css' %}">#}
-{#    <link rel="stylesheet" href="{% static 'bootstrap/philosophy-colorlib/css/vendor.css' %}">#}
-{#    <link rel="stylesheet" href="{% static 'bootstrap/philosophy-colorlib/css/main.css' %}">#}
+    <link rel="stylesheet" href="{% static 'bootstrap/philosophy-colorlib/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/philosophy-colorlib/css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/philosophy-colorlib/css/main.css' %}">
 
     {% endblock %}
 
@@ -39,7 +39,9 @@
 
     <div class="mb-1">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="{% url 'home' %}">Philosophy</a>
@@ -276,9 +278,11 @@
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
+                        <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
                             <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/lamp-400.jpg' %}"
-                                    srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/lamp-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/lamp-800.jpg' %} 2x" alt="">
+                                 srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/lamp-400.jpg' %}
+                                 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/lamp-800.jpg' %} 2x"
+                                 alt="">
                         </a>
                     </div>
 
@@ -286,20 +290,22 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 15, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">December 15, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">Just a Standard Format Post.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">Just a Standard Format Post.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
+                              proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
+                              incididunt velit sint in aliqua...
                             </p>
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Design</a>
-                                <a href="category.html">Photography</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Design</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Photography</a>
                             </span>
                         </div>
                     </div>
@@ -321,7 +327,7 @@
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
+                        <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
                             <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/tulips-400.jpg' %}"
                                     srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/tulips-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/tulips-800.jpg' %} 2x" alt="">
                         </a>
@@ -331,9 +337,9 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 15, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">December 15, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">10 Interesting Facts About Caffeine.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">10 Interesting Facts About Caffeine.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -343,7 +349,7 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Health</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Health</a>
                             </span>
                         </div>
                     </div>
@@ -353,7 +359,7 @@
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
+                        <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
                             <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/cookies-400.jpg' %}"
                                     srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/cookies-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/cookies-800.jpg' %} 2x" alt="">
                         </a>
@@ -363,9 +369,9 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 10, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">December 10, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">No Sugar Oatmeal Cookies.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">No Sugar Oatmeal Cookies.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -375,8 +381,8 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Cooking</a>
-                                <a href="category.html">Health</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Cooking</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Health</a>
                             </span>
                         </div>
                     </div>
@@ -386,7 +392,7 @@
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
+                        <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
                             <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/wheel-400.jpg' %}"
                                     srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/wheel-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/wheel-800.jpg' %}' 2x" alt="">
                         </a>
@@ -396,9 +402,9 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 10, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">December 10, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">Visiting Theme Parks Improves Your Health.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">Visiting Theme Parks Improves Your Health.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -429,9 +435,9 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-video.html">December 10, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-video.html' %}">December 10, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-video.html">Key Benefits Of Family Photography.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-video.html' %}">Key Benefits Of Family Photography.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -441,8 +447,8 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Family</a>
-                                <a href="category.html">Photography</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Family</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Photography</a>
                             </span>
                         </div>
                     </div>
@@ -473,9 +479,9 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-gallery.html">December 10, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-gallery.html' %}">December 10, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-gallery.html">Workspace Design Trends and Ideas.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-gallery.html' %}">Workspace Design Trends and Ideas.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -485,8 +491,8 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Work</a>
-                                <a href="category.html">Management</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Work</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Management</a>
                             </span>
                         </div>
                     </div>
@@ -496,7 +502,7 @@
                 <article class="masonry__brick entry format-audio" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-audio.html" class="entry__thumb-link">
+                        <a href="{% static 'bootstrap/philosophy-colorlib/single-audio.html' %}" class="entry__thumb-link">
                             <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/guitarman-400.jpg' %}"
                                     srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/guitarman-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/guitarman-800.jpg' %} 2x" alt="">
                         </a>
@@ -509,9 +515,9 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-audio.html">December 10, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-audio.html' %}">December 10, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-audio.html">What Your Music Preference Says About You and Your Personality.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-audio.html' %}">What Your Music Preference Says About You and Your Personality.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -521,8 +527,8 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Music</a>
-                                <a href="category.html">Lifestyle</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Music</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Lifestyle</a>
                             </span>
                         </div>
                     </div>
@@ -545,7 +551,7 @@
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
+                        <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
                             <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/jump-400.jpg' %}"
                                     srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/jump-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/jump-800.jpg' %} 2x" alt="">
                         </a>
@@ -555,9 +561,9 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 10, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">December 10, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">Create Meaningful Family Moments.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">Create Meaningful Family Moments.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -567,8 +573,8 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Family</a>
-                                <a href="category.html">Relationship</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Family</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Relationship</a>
                             </span>
                         </div>
                     </div>
@@ -578,7 +584,7 @@
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
+                        <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
                             <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/beetle-400.jpg' %}"
                                     srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/beetle-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/beetle-800.jpg' %} 2x" alt="">
                         </a>
@@ -588,9 +594,9 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 10, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">December 10, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">Throwback To The Good Old Days.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">Throwback To The Good Old Days.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -600,7 +606,7 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Lifestyle</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Lifestyle</a>
                             </span>
                         </div>
                     </div>
@@ -610,7 +616,7 @@
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
+                        <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
                             <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/fuji-400.jpg' %}"
                                     srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/fuji-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/fuji-800.jpg' %} 2x" alt="">
                         </a>
@@ -620,9 +626,9 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 10, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">December 10, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">Just Another  Standard Format Post.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">Just Another  Standard Format Post.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -632,8 +638,8 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Design</a>
-                                <a href="category.html">Photography</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Design</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Photography</a>
                             </span>
                         </div>
                     </div>
@@ -643,7 +649,7 @@
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
+                        <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}" class="entry__thumb-link">
                             <img src="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/sydney-400.jpg' %}"
                                     srcset="{% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/sydney-400.jpg' %} 1x, {% static 'bootstrap/philosophy-colorlib/images/thumbs/masonry/sydney-800.jpg' %} 2x" alt="">
                         </a>
@@ -653,9 +659,9 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 10, 2017</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">December 10, 2017</a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">Planning Your First Trip to Sydney.</a></h1>
+                            <h1 class="entry__title"><a href="{% static 'bootstrap/philosophy-colorlib/single-standard.html' %}">Planning Your First Trip to Sydney.</a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -665,8 +671,8 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Travel</a>
-                                <a href="category.html">Vacation</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Travel</a>
+                                <a href="{% static 'bootstrap/philosophy-colorlib/category.html' %}">Vacation</a>
                             </span>
                         </div>
                     </div>
@@ -913,17 +919,17 @@
 
     <!-- preloader
     ================================================== -->
-    <div id="preloader">
-        <div id="loader">
-            <div class="line-scale">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </div>
+{#    <div id="preloader">#}
+{#        <div id="loader">#}
+{#            <div class="line-scale">#}
+{#                <div></div>#}
+{#                <div></div>#}
+{#                <div></div>#}
+{#                <div></div>#}
+{#                <div></div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
 
 
