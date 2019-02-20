@@ -824,9 +824,7 @@
 
     </section> <!-- end s-extra -->
 
-
-    <!-- s-footer
-    ================================================== -->
+    {% block footer %}
     <footer class="s-footer">
 
         <div class="s-footer__main">
@@ -915,7 +913,8 @@
             </div>
         </div> <!-- end s-footer__bottom -->
 
-    </footer> <!-- end s-footer -->
+    </footer>
+    {% endblock footer %}
 
 
     <!-- preloader
@@ -931,11 +930,6 @@
 {#            </div>#}
 {#        </div>#}
 {#    </div>#}
-
-
-
-
-
 
 
 
@@ -958,17 +952,10 @@
 
       <script src="{% static 'js/project.js' %}"></script>
 
-
     <!-- script
     ================================================== -->
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
-
-
-
-
-
-
     {% endblock javascript %}
   </body>
 </html>
