@@ -1,7 +1,0 @@
-# PostgreSQL
-# ------------------------------------------------------------------------------
-POSTGRES_HOST=postgres
-POSTGRES_PORT=5432
-POSTGRES_DB=philosophy
-POSTGRES_USER=LKupoOCKFcqVvffsFPZpWOZsLMSwamAJ
-POSTGRES_PASSWORD=JYcnbSBV7FjzhtHhfuvplLNHZcJSYMVydtvTSoIqneEmliVoh0BCzlrgIFSFkveb
